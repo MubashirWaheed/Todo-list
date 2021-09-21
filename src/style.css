@@ -1,59 +1,199 @@
+:root{
+    --text-primary: #787878;
+    --nav-background:#ff6347;
+}
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
 nav{
-    position: fixed;
-    height: 100%;
-    width: 20rem;
-    background-color: rgb(128, 128, 128,0.1);
-    overflow-y: scroll;
+    color: white;
+    background-color: tomato;
 }
-.container{
-    margin-top: 40px;
-    margin-left: 50px;
+nav>p{
+    font-size: 50px;
+    margin-left: 75px;
 }
-.items{
+main{
+    position: relative;
+}
+/* SIDEBAR */
+.sidebar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    background-color: #fafafa;
+    height: calc(100vh - 58px);
+    overflow-y: auto;
+    position: relative;
+}
+
+.sidebar-wrapper{
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    margin: 50px 0px 0px 75px;
 }
-.item{
+.permenant-item{
     display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    margin: 5px 0px;
+    margin: 10px;
     cursor: pointer;
-}
-.dashboard-link{
-    text-decoration: none;
-    padding: 5px;
-    margin: 5px 5px 5px 10px;
-    color: black;
-}
-.add{
-    position: fixed;
-    bottom: 75px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     align-items: center;
-    font-size: 40px;
-    width: 50px;
-    height: 50px;
-    color: white;
-    background-color: #ff6a39;
-    border-radius: 30px;
-    cursor: pointer;
+}
+svg{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    fill: tomato;
 }
 .projects{
-    margin-left: 50px;
-    margin-top: 50px;
+    margin: 10px;
+    
 }
-.project{
-    margin: 5px 5px 5px 0px;
-    padding: 5px 5px 5px 0px;
+.projects> p{
+    user-select: none;
+    align-self: center;
+    color: black;
+}
+hr{
+    color: rgb(195, 195, 195);
+    opacity: 0.4;
+}
+
+.add-project{
+    display: inline-block;
+    background-color: var(--nav-background);
+    color: white;
+    font-size: 40px;
+    width: 45px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 50px;
+    bottom: 75px;
+    cursor: pointer;
+    box-shadow: 10px 11px 40px -6px rgba(0,0,0,0.55);
+}
+.project-top{
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.arrow{
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 200;
+    transition: transform 0.5s; 
+    transform: rotate(90deg);
+}
+.arrow:hover{
+    color: violet;
+}
+ul{
+    margin-top: 15px;
+    list-style-type: none;
+}
+.sidebar-item{
+    display: flex;
+    cursor: pointer;
+    margin: 15px 0px;
+    user-select: none;
+    align-items: center;
+}
+.circle{
+    text-align: center;
+    font-size: 10px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--text-primary);
+    color: var(--text-primary);
+    margin-right: 13px;
+}
+
+/* TASK SECTION */
+.task-section{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: calc(100vh - 58px);
+    overflow-y: auto;
+}
+
+.project-detail{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 30px auto;  
+}
+.description{
+    /* height: 50px; */
+    padding: 12px 2px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color:var(--text-primary);
+    resize: none;
+    /* overflow: hidden; */
+    /* background-color: lightcyan; */
+    /* max-height: 150px; */
+    /* overflow:-moz-hidden-unscrollable; */
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 10px 0px;
+}
+.item-left{
+    display: flex;
+    align-items: center;
+}
+.checkbox{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.checkbox:checked + label.label{
+    text-decoration: line-through;
+}
+.label{
+    color: var(--text-primary);
+}
+
+.star{
+    cursor: pointer;
+}
+.cross{
+    cursor: pointer;
+}
+.add-task{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: var(--text-primary) 1px solid;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+.input-task{
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+
+
+@media screen and (max-width:600px) {
+    nav>p{
+        font-size: 30px;
+        margin-left: 50px;
+    }
+    main{
+        height: calc(100% - 34.59px);
+    }
 }
