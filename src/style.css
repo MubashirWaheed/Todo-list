@@ -69,7 +69,7 @@ hr{
     margin-right: 15px;
     font-weight: 200;
     transition: transform 0.5s; 
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
 }
 .arrow:hover{
     color: violet;

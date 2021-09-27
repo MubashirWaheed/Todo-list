@@ -1,0 +1,41 @@
+Features that needs to be implemented
+    1 Create a form that pops up on click of add button to add project
+        - Create black overlay
+        - Add type of task inside form
+        - Name of task 
+        - Description of task (optional)
+    2 Respnsive design 
+        - make sidear slide from left side for mobile version
+    3 Code javascript         
+
+23 September 2021
+Working of javascript
+    1) User clicks on add project button in sidebar, form is displayed + user fills form ✅
+    2) Data from form is collected when form is submitted and project name is used to create instance of Project class ✅
+    3) Object created is pushed to an array ✅
+
+Dom manipulation
+    => After object is pushed in array, project name is displayed in sidebar.
+    => When project name is clicked task section is populated.
+    => Description shows up is added in form 
+    => Implement the functionality of addding tasks.
+
+Keyboard support 
+    - enter key submit form ❎
+    - enter key add subtask ✅
+
+25 September 2021 
+Q What is the correct way to add dynamically objects with different name to an array ?
+Q Think how you aim to implement the whole project (linking of project name with subtasks) 
+Q finally dom manipulation   
+
+26 September 2021
+    1)-object which has property named subtask and it's data type is array.
+        That array is empty initially and when tasks are added in task section it's value is added. ✅
+    2) Key board functionality for the subtask. ✅
+
+27 September 2021
+    1) Code refactoring    
+    2) Create dom elements for the subtasks 
+    2) Today and Month default Items in array
+    - Makes subtasks also switch
